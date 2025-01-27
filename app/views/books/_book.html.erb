@@ -1,0 +1,22 @@
+<div id="<%= dom_id book %>">
+  <p>
+    <strong>Titulo:</strong>
+    <%= book.title %>
+  </p>
+
+  <p>
+    <strong>Autor:</strong>
+    <%= book.author %>
+  </p>
+
+  <p>
+    <strong>Descrição:</strong>
+    <%= book.content %>
+  </p>
+
+  <p>
+    <strong>Avaliação:</strong>
+    <%= book.rating.present? ? "#{book.rating} estrelas de 5" : "Sem avaliação" %>
+  </p>
+
+</div>

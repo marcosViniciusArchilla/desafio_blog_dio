@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Books" %>
+
+<h1>Livros lidos durante meu ano</h1>
+<h2>Esse blog foi criado para mostar os livos que foram lidos durante meu ano!</h2>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Ver esse livro", book %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Novo livro", new_book_path %>
